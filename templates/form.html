@@ -1,0 +1,109 @@
+{% extends 'index.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+  
+    
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>Kid' school - Registration</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <script type="text/javascript" src="{% static 'js/validate.js' %}"></script>
+</head>
+<body>
+    {% block content %}
+    <style>
+        body{
+            background-color: lightgray;
+        }
+        
+        label{
+            margin-bottom:25px ;
+            width: 80%;
+        }
+        form{
+            text-align: center;
+            margin:20px auto;
+            width: 50%;
+        }
+        input[type=text],input[type=number],input[type=date],input[type=email]{
+            display: block;
+            margin-bottom:25px ;
+            width: 50%;
+            border: 2px solid steelblue;
+        }
+        input{
+            margin-left: 25%;
+            padding: 10px;
+            font-size: inherit;
+            border-radius: 4px;
+        }
+        select{
+            display: block;
+            width: 50%;
+            margin-left: 25%;
+            margin-bottom: inherit;
+            padding: 10px;
+            font-size: inherit;
+            border-radius: 4px;
+            border: 2px solid steelblue;
+        }
+        input[type=submit], input[type=reset] {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            }
+        input[type=radio]{
+            margin: 0 8px 25px 18px;
+        }
+        .title{
+            text-align: center;
+            font-size: 50px;
+            color:steelblue;
+            margin-bottom: 30px;
+        }
+    </style>
+    <form action="result" href="result.html" method="post" name="StudentRegistration" onsubmit="return(validate());">
+        {% csrf_token %}
+        <div class="title">
+            <b>Student Registration Form</b>
+        </div>    
+
+        <input type="text" placeholder="Student name" name="studentname" id="studentname" size="30">
+        <input type="text" placeholder="Father name" name="fathername" id="fathername" size="30">
+        <input type="text" placeholder="Postal address" name="paddress" id="paddress" size="30">
+        <input type="text" placeholder="Personal address" name="personaladdress"id="personaladdress" size="30">
+        <input type="radio" name="sex" value="male" size="10"><label>Male</label>
+        <input type="radio" name="sex" value="Female" size="10"><label>Female</label>
+        <select aria-placeholder="CITY" name="City">
+            <option value="-1" selected>CITY</option>
+            <option value="New Delhi">NEW DELHI</option>
+            <option value="Mumbai">MUMBAI</option>
+            <option value="Goa">GOA</option>
+            <option value="Tamilnadu">TAMILNADU</option>
+            <option value="Kerala">KERALA</option>
+        </select>
+        <select aria-placeholder="COURSE" name="Course">
+            <option value="-1" selected>COURSE</option>
+            <option value="Playschool">PLAY SCHOOL</option>
+            <option value="Prekg">PRE-KG</option>
+            <option value="first standard">FIRST STANDARD</option>
+        </select>
+        <input type="number" placeholder="Pincode" maxlength="6" name="pincode" id="pincode" size="30">
+        <input type="email" placeholder="Email" name="emailid" id="emailid" size="30">
+        <input placeholder="Date of birth" type="date" name="dob" id="dob" size="30">
+        <input type="number" placeholder="Mobile number" maxlength="10" name="mobileno" id="mobileno" size="30">
+        <input type="reset" value="Reset form">
+        <input type="submit" value="Submit Form" >       
+    </form>
+{% endblock %}
+</body>
+
+</html>

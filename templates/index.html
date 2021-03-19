@@ -1,0 +1,151 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="oldie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>Kid' school - Home</title>
+	<link href='http://fonts.googleapis.com/css?family=Gochi+Hand|Arvo:400,700' rel='stylesheet' type='text/css'>
+	<link href="{% static 'css/jquery.bxslider.css' %}" rel="stylesheet" />
+	<link rel="stylesheet" href="/static/css/style.css?{% now "U" %}"/>
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="wrapper" class="homepage">
+		<div class="wrapper-holder">
+			<header id="header">
+				<div class="left-part"></div>
+				<a id="logo" href="#">Kid' school</a>
+				<div class="bar-holder">
+					<a class="menu_trigger" href="#">menu</a>
+					<nav id="nav">
+						<ul>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Events</a></li>
+							<li><a href="#">Gallery</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<section class="promo">
+				<div class="slider-wrap">
+					<ul class="slider">
+						<li>
+							<img class="slide" src="{% static 'images/slide02.jpg'%}" alt="">
+							<img class="slide-mask" src="{% static 'images/bg_slider-mask.png'%}" alt="">
+							<div class="slide-info">
+								<h1><a href="#">Education for kids</a></h1>
+								<p>"You’re off to great places! <br> Today is your day! <br> Your mountain is waiting,<br> so get on your way!"</p>
+								<a action= "form" class="btn red" href="form.html">Register now</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section id="main">
+				<div class="widget-boxes">
+					<div class="box">
+						<a href="#">
+							<div class="box-info about">
+								<h2>About the school</h2>
+								<p>Our school's mission is to provide a safe, disciplined learning environment that empowers all students to develop their full potential. We feel strongly about helping to build leaders that have the ability to succeed in whatever endeavor they undertake. Winning is not always the measure of success.</p>
+							</div>
+						</a>
+					</div>
+					<div class="box">
+						<a href="#">
+							<div class="box-info experience">
+								<h2>Our experience</h2>
+								<p>Through discovery, exploration, innovation, and creative expression through Arts integration and after school enrichment opportunities, students receive rich, extended learning opportunities while building a positive school culture where every member feels valued and respected.</p>
+							</div>
+						</a>
+					</div>
+					<div class="box">
+						<a href="#">
+							<div class="box-info fun">
+								<h2>Big fun for kids!</h2>
+								<p>Through coaching, collaboration and building professional learning communities, we offer staff professional development training to build teachers capacity to improve instructional practices and to accelerate student achievement.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				
+			</section>
+		</div>
+		<div class="top-blue-border"></div>
+		<footer id="footer">
+			<div class="footer-holder">
+				<div class="footer-frame">
+					<div class="footer-content">
+						<div class="col-holder">
+							<div class="col_wrap">
+								<div class="col">
+									<h3>Our address</h3>
+									<address class="map">Chennai,Tamilnadu</address>
+									<address class="mail"><a href="mailto:contact@kidschool.com">contact@kidschool.com</a></address>
+									<address class="phone">+91 9123456780</address>
+								</div>
+							</div>
+							<div class="col_wrap">
+								<div class="col">
+									<h3>Latest posts</h3>
+									<ul class="posts">
+										<li><a href="#">annual day function</a></li>
+										<li><a href="#">students exchange program</a></li>
+										<li><a href="#">scince exhibition 2021</a></li>
+										<li><a href="#">visit to state all school meet 2021</a></li>
+										<li><a href="#">sport meet 2021</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col_wrap">
+								<div class="col">
+									<h3>Follow us</h3>
+									<p class="social">To see all updates about our school be in touch with us in following social media platforms.</p>
+									<ul class="social">
+										<li><a class="facebook" href="#">Facebook</a></li>
+										<li><a class="google" href="#">Google+</a></li>
+										<li><a class="twitter" href="#">Twitter</a></li>
+										<li><a class="pinterest" href="#">Pinterest</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col_wrap">
+								<div class="col">
+									<h3>Newsletter</h3>
+									<p class="form-newsletter">Subscribe to get latest news about our school.</p>
+									<form action="#" class="form-newsletter">
+										<fieldset>
+											<input type="email" placeholder="Your email..." />
+											<input class="btn white" type="submit" value="Subscribe" />
+										</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer-bottom">
+						<div class="holder">
+							<p>Copyright 2014 Kid’ school. All rights reserved.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>	
+	</div>
+	
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.placeholder.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+{% endblock %}
+</html>
